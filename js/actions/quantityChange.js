@@ -12,14 +12,14 @@ const increaseAndDecreaseQuantity = () =>{
       
       for (let i = 0; i < inputQuantityElements.length; i++) 
       {
-          inputQuantityElements[i].nextSibling.onclick = function()
+          inputQuantityElements[i].nextSibling.onclick = () =>
           {
               inputQuantityElements[i].value ++;
       
               updatePrices(i);
           }
   
-          inputQuantityElements[i].previousSibling.onclick = function()
+          inputQuantityElements[i].previousSibling.onclick = () =>
           {
               if(inputQuantityElements[i].value > 1) inputQuantityElements[i].value --;
               
