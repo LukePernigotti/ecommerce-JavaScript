@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'BrushScriptStd';
+	src: url('./brushscriptstd.eot');
+	src: local('brushscriptstd'), 
+	url('./brushscriptstd.woff') format('woff'), 
+	url('./brushscriptstd.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Programación I</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+</head>
+<body>
+    <header>
+        <h1>ArtStore</h1>
+    </header>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="buyProcess.html">Productos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="floating-cart" style="position: relative; top: 0;">
+            <div class="cart-nav">
+                <a href="buyProcess.html">Carrito</a>
+            </div>
+        </div>
+        <section class="contact">
+            <div class="contact-form">
+                <h2>Contactanos</h2>
+                <form action="contactar.php" method="post">
+                    <label for="name">Nombre:</label><input type="text" id="name" placeholder="Nombre">
+                    <label for="email">Correo electrónico:</label><input type="text" id="email" placeholder="algo@email.com">
+                    <label for="message">Mensaje:</label><textarea name="msg" id="message" cols="30" rows="9" placeholder="Escribe aquí tu mensaje"></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6042159061526!2d-58.47488888477004!3d-34.61416838045676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9f071a7267d%3A0xa360ec3b81503133!2sAv.+Juan+B.+Justo+5327%2C+C1416DKH+CABA!5e0!3m2!1ses!2sar!4v1549726615724" width="580" height="347"></iframe>
+                <div>
+                    <p>Av. Juan B. Justo 5327</p>
+                    <p>0810 202 2212</p>
+                    <a href="mailto:ecommerce@artstore.com.ar">ecommerce@artstore.com.ar</a>
+                </div>
+            </div>
+        </section>
+
+        
+
+    </main>
+    <footer>
+        <div class="footer-box">
+            <img src="img/logo.svg" alt="">
+            <div class="footer-content">
+                <div>
+                    <span>Métodos de pago</span>
+                    <img src="img/payment.png" alt="">
+                </div>
+                <div class="social">
+                    <span>Seguinos</span>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ul class="footer-bottom">
+                <li>&copy;2017 Todos los derechos reservados</li>
+                <li>0800 202 2212</li>
+                <li><a href="mailto:ecommerce@artstore.com.ar">ecommerce@artstore.com.ar</a></li>
+                <li>Alumno: Lucas Pernigotti | DWTN2A</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
