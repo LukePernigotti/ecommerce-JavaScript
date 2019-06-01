@@ -1,4 +1,4 @@
-const validation = () =>{
+const validation = () => {
     const inputs = document.getElementsByTagName('input');
     let validation = true;
 
@@ -11,27 +11,34 @@ const validation = () =>{
             }
         }
     }
-    if (!inputs[7].checked && !inputs[8].checked && !inputs[9].checked){
+    if (!inputs[7].checked && !inputs[8].checked && !inputs[9].checked) {
         inputs[7].nextSibling.style.border = 'red solid 1px';
         inputs[8].nextSibling.style.border = 'red solid 1px';
         inputs[9].nextSibling.style.border = 'red solid 1px';
         validation = false;
-    }else{
+    } else {
         inputs[7].nextSibling.removeAttribute('style');
         inputs[8].nextSibling.removeAttribute('style');
         inputs[9].nextSibling.removeAttribute('style');
     }
-    if (!inputs[10].checked && !inputs[11].checked && !inputs[12].checked){
+    if (!inputs[10].checked && !inputs[11].checked && !inputs[12].checked) {
         inputs[10].nextSibling.style.border = 'red solid 1px';
         inputs[11].nextSibling.style.border = 'red solid 1px';
         inputs[12].nextSibling.style.border = 'red solid 1px';
         validation = false;
-    }else{
+    } else {
         inputs[10].nextSibling.removeAttribute('style');
         inputs[11].nextSibling.removeAttribute('style');
         inputs[12].nextSibling.removeAttribute('style');
     }
 
-    if (validation) { addThanksMsg(); return false;}
+    if (validation) {
+        addThanksMsg();
+
+        //localStorage
+        localStorage.removeItem("Cart");
+
+        return false;
+    }
     else return false;
 }

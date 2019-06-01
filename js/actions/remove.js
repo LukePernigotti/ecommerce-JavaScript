@@ -1,39 +1,33 @@
 const divProductElements = document.getElementsByClassName('product');
 
-const remove = (whatToRemove) =>{
-  if (onSection == 'categories')
-  {
+const remove = (whatToRemove) => {
+  if (onSection == 'categories') {
     //removeSectionProducts
     productsContentElement.removeChild(sectionCategoriesElement);
     mainElement.removeChild(trendingElement);
     if (whatToRemove == 'leftInfo') productsContentElement.removeChild(leftInfoElement);
-    
-    if(whatToRemove == 'bar and leftInfo')//lo uso cuando voy al cart
+
+    if (whatToRemove == 'bar and leftInfo')//lo uso cuando voy al cart
     {
       mainElement.removeChild(barElement);
       productsContentElement.removeChild(leftInfoElement);
       mainElement.removeChild(productsContentElement);
     }
   }
-  else if (onSection == 'products')
-  {
-    if (whatToRemove == 'products')
-    {
+  else if (onSection == 'products') {
+    if (whatToRemove == 'products') {
       //removeProducts
       const numOfProductsInPage = divProductElements.length;
-      for (let i = 0; i < numOfProductsInPage; i++) 
-      {
+      for (let i = 0; i < numOfProductsInPage; i++) {
         divProductsBodyElement.removeChild(divProductElements[0]);
       }
     }
-    else if(whatToRemove == 'pagination')
-    {
+    else if (whatToRemove == 'pagination') {
       //removePagination
       paginationElement = document.getElementsByClassName('pagination')[0];
       divProductsBodyElement.removeChild(paginationElement);
     }
-    else
-    {
+    else {
       //removePagination
       paginationElement = document.getElementsByClassName('pagination')[0];
       divProductsBodyElement.removeChild(paginationElement);
@@ -78,25 +72,22 @@ const remove = (whatToRemove) =>{
 
     }
   }
-  else if (onSection == 'product')
-  {
+  else if (onSection == 'product') {
     productsContentElement.removeChild(asideBuyInfoElement);
     productsContentElement.removeChild(productSelfSectionElement);
 
-    if(whatToRemove != 'all but productsContentElement') mainElement.removeChild(productsContentElement);
+    if (whatToRemove != 'all but productsContentElement') mainElement.removeChild(productsContentElement);
     mainElement.removeChild(trendingElement);
     mainElement.removeChild(breadcrumbElement);
     if (whatToRemove == 'bar') mainElement.removeChild(barElement);
   }
-  else if (onSection == 'cart')
-  {
+  else if (onSection == 'cart') {
     mainElement.removeChild(sectionCartElement);
     mainElement.removeChild(trendingElement);
   }
-  else if (onSection == 'checkout')
-  {
+  else if (onSection == 'checkout') {
     mainElement.removeChild(sectionCheckoutElement);
-    if(whatToRemove == 'thanksMsg'){
+    if (whatToRemove == 'thanksMsg') {
       mainElement.removeChild(shadowBoxElement);
       mainElement.removeChild(thanksMsgBoxElement);
     }
